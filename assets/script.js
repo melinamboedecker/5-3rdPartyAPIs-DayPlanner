@@ -31,18 +31,18 @@ for (var i = 0; i < timesForRows.length; i++) {
 
 //create unique ids for input fields and save buttons
 
-var inputId = document.getElementsByClassName('col-8');
-for (var i=0; i<inputId.length; i++) {
-    inputId[i].id = (i+9);
+var rows = $(".col-8")
+for (var i=0; i<rows.length; i++) {
+    rows[i].id = (i+9);
 }
 
 var buttonId = document.getElementsByClassName('saveBtn')
+var buttonId = $('.saveBtn')
 for (var i=0; i<buttonId.length; i++) {
     buttonId[i].id = 'save' + (i+9);
 }
 
 //get rows to change colors depending on current time
-var rows = $(".col-8");
 var currentTime = parseInt(moment().format("H"));
 var rowsArray = Array.from(rows);
 
