@@ -45,7 +45,35 @@ for (var i=0; i<buttonId.length; i++) {
     buttonId[i].id = 'save' + (i+9);
 }
 
+//get rows to change colors depending on current time
+var rows = $(".col-8");
+var currentTime = parseInt(moment().format("H"));
+console.log(rows);
+console.log(rows.length);
+var rowsArray = Array.from(rows);
+console.log(rowsArray);
+console.log(rowsArray.length);
+console.log(currentTime);
 
+function changeColors() {
+for (var i = 0; i < rowsArray.length; i++) {
+   
+    var tempid = parseInt(rows[i].id);
+
+    // console.log(table)
+    
+    if (tempid < currentTime) {
+        $(rowsArray[i]).addClass('past');
+    } else
+    if (tempid === currentTime) {
+        $(rowsArray[i]).addClass('present');
+    } else 
+    if (tempid > currentTime) {
+        $(rowsArray[i]).addClass('future');
+    } 
+} 
+}
+changeColors();
 
 
 
