@@ -14,7 +14,6 @@ $("#time").text(displayCurrentTime);
 //create div class=row elements for table
  var table = $('#table')
 var timesForRows = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM']
-console.log(timesForRows.length);
 var rowSection;
 var tableFirstCol;
 var tableSecondCol;
@@ -23,10 +22,7 @@ var tableThirdCol;
 //create table with rows for each hour of workday
 for (var i = 0; i < timesForRows.length; i++) {
     var rowSection = $('<section>').addClass('row');
-    console.log(rowSection);
-    console.log(timesForRows[i]);
     var tableFirstCol = $('<div>').text(timesForRows[i]).addClass('col hour time-block');
-    console.log(tableFirstCol);
     var tableSecondCol = $('<input>').attr('type', 'text').addClass('col-8 description');
     var tableThirdCol = $('<button>').text('Save').addClass('col saveBtn');
     $(rowSection).append(tableFirstCol).append(tableSecondCol).append(tableThirdCol);
@@ -48,19 +44,12 @@ for (var i=0; i<buttonId.length; i++) {
 //get rows to change colors depending on current time
 var rows = $(".col-8");
 var currentTime = parseInt(moment().format("H"));
-console.log(rows);
-console.log(rows.length);
 var rowsArray = Array.from(rows);
-console.log(rowsArray);
-console.log(rowsArray.length);
-console.log(currentTime);
 
 function changeColors() {
 for (var i = 0; i < rowsArray.length; i++) {
    
     var tempid = parseInt(rows[i].id);
-
-    // console.log(table)
     
     if (tempid < currentTime) {
         $(rowsArray[i]).addClass('past');
