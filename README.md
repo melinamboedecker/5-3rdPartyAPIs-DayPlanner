@@ -17,3 +17,6 @@ openweathermap API
 ## Link
 https://melinamboedecker.github.io/5-3rdPartyAPIs-DayPlanner/
 
+## License
+Copyright (c) 2021 Melina Boedecker
+Licensed under the MIT license.
