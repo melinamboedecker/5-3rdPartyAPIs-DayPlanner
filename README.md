@@ -8,7 +8,6 @@ This App was created with dynamically updated HTML and CSS powered by jQuery.  U
 
 ## Technologies:
 HTML, CSS, and Javascript
-openweathermap API
 
 ## Screenshot
 ![Screenshot](assets/screenshot-5-DayPlanner.png)
