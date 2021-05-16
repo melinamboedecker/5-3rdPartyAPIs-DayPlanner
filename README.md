@@ -6,9 +6,14 @@ This is a calendar application that allows a user to plan out thier workday. Use
 
 This App was created with dynamically updated HTML and CSS powered by jQuery.  User entered data is stored in local Storage. Current date and time features utilize Moment.js. 
 
+## Technologies:
+HTML, CSS, and Javascript
+openweathermap API
+
 ## Screenshot
 ![Screenshot](assets/screenshot-5-DayPlanner.png)
 
 
 ## Link
 https://melinamboedecker.github.io/5-3rdPartyAPIs-DayPlanner/
+
